@@ -1,3 +1,4 @@
+require 'scraperwiki'
 require 'mechanize'
 require 'date'
 
@@ -50,7 +51,7 @@ das = das_data.collect do |da_item|
 end
 
 das.each do |record|
-   if ScraperWiki.select("* from swdata where `council_reference`='#{record['council_reference']}'").empty? 
+   if ScraperWiki.select("* from data where `council_reference`='#{record['council_reference']}'").empty? 
      ScraperWiki.save_sqlite(['council_reference'], record)
    else
      puts "Skipping already saved record " + record['council_reference']
