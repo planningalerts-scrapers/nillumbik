@@ -34,8 +34,6 @@ while summary_page
   end
 end
 
-comment_url = 'mailto:nillumbik@nillumbik.vic.gov.au'
-
 das = das_data.collect do |da_item|
   page_info = {}
   page_info['council_reference'] = da_item[headers.index('Application number')]
@@ -45,7 +43,6 @@ das = das_data.collect do |da_item|
   page_info['date_received'] = Date.strptime(da_item[headers.index('Date lodged')], '%d/%m/%Y').to_s
   page_info['address'] = da_item[headers.index('Location')]
   page_info['date_scraped'] = Date.today.to_s
-  page_info['comment_url'] = comment_url
   
   page_info
 end
