@@ -84,18 +84,19 @@
   date_received: '2018-11-26'
   address: 14-16 Taylor Street, ELTHAM  VIC  3095
   date_scraped: '2019-05-15'
+- council_reference: 631/2018/03P
+  info_url: https://epathway.nillumbik.vic.gov.au/ePathway/Production/web/GeneralEnquiry/enquirylists.aspx
+  description: Building and works to construct a second dwelling and associated native
+    vegetation removal
+  date_received: '2018-12-14'
+  address: 45 Orchard Avenue, ELTHAM NORTH  VIC  3095
+  date_scraped: '2019-05-15'
 - council_reference: 644/2016/11AP/B
   info_url: https://epathway.nillumbik.vic.gov.au/ePathway/Production/web/GeneralEnquiry/enquirylists.aspx
   description: Amendment - Use and development of the land for a child care centre
     and construction of fencing (Extend operating hours by 30 mins to close at 6.30pm)
   date_received: '2019-04-18'
   address: 12 Bridge Street, ELTHAM  VIC  3095
-  date_scraped: '2019-05-15'
-- council_reference: 650/2018/03P
-  info_url: https://epathway.nillumbik.vic.gov.au/ePathway/Production/web/GeneralEnquiry/enquirylists.aspx
-  description: Buildings and works to construct four dwellings
-  date_received: '2018-12-20'
-  address: 8 Fraser Street, DIAMOND CREEK  VIC  3089
   date_scraped: '2019-05-15'
 - council_reference: 69/2019/05P
   info_url: https://epathway.nillumbik.vic.gov.au/ePathway/Production/web/GeneralEnquiry/enquirylists.aspx
