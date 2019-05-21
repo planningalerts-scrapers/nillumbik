@@ -8,10 +8,7 @@ scraper = EpathwayScraper::Scraper.new(
 )
 agent = scraper.agent
 
-first_page = agent.get url
-first_page_form = first_page.forms.first
-first_page_form.radiobuttons[2].click
-summary_page = first_page_form.click_button
+summary_page = scraper.pick_type_of_search(:advertising)
 
 while summary_page
   table = summary_page.root.at_css('table.ContentPanel')
