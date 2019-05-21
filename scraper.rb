@@ -1,11 +1,12 @@
-require 'scraperwiki'
-require 'mechanize'
-require 'date'
+require "epathway_scraper"
 
 base_url = "https://epathway.nillumbik.vic.gov.au/ePathway/Production/web/GeneralEnquiry/"
 url = "#{base_url}enquirylists.aspx"
 
-agent = Mechanize.new
+scraper = EpathwayScraper::Scraper.new(
+  "https://epathway.nillumbik.vic.gov.au/ePathway/Production"
+)
+agent = scraper.agent
 
 first_page = agent.get url
 first_page_form = first_page.forms.first
@@ -43,5 +44,5 @@ das = das_data.collect do |da_item|
 end
 
 das.each do |record|
-  ScraperWiki.save_sqlite(['council_reference'], record)
+  EpathwayScraper.save(record)
 end
