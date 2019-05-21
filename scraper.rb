@@ -1,9 +1,6 @@
 require "epathway_scraper"
 
-scraper = EpathwayScraper::Scraper.new(
-  "https://epathway.nillumbik.vic.gov.au/ePathway/Production"
+EpathwayScraper::Scraper.scrape_and_save(
+  "https://epathway.nillumbik.vic.gov.au/ePathway/Production",
+  list_type: :advertising
 )
-
-scraper.scrape(list_type: :advertising) do |record|
-  EpathwayScraper.save(record)
-end
