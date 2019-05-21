@@ -5,9 +5,7 @@ require 'date'
 base_url = "https://epathway.nillumbik.vic.gov.au/ePathway/Production/web/GeneralEnquiry/"
 url = "#{base_url}enquirylists.aspx"
 
-agent = Mechanize.new do |a|
-  a.verify_mode = OpenSSL::SSL::VERIFY_NONE
-end
+agent = Mechanize.new
 
 first_page = agent.get url
 p first_page.title.strip
@@ -43,7 +41,7 @@ das = das_data.collect do |da_item|
   page_info['date_received'] = Date.strptime(da_item[headers.index('Date lodged')], '%d/%m/%Y').to_s
   page_info['address'] = da_item[headers.index('Location')]
   page_info['date_scraped'] = Date.today.to_s
-  
+
   page_info
 end
 
