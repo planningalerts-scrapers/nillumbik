@@ -8,12 +8,9 @@ url = "#{base_url}enquirylists.aspx"
 agent = Mechanize.new
 
 first_page = agent.get url
-p first_page.title.strip
 first_page_form = first_page.forms.first
 first_page_form.radiobuttons[2].click
 summary_page = first_page_form.click_button
-
-p summary_page.title.strip
 
 das_data = []
 while summary_page
